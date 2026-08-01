@@ -1,0 +1,150 @@
+/*====================================
+INSTITUTE HERO
+====================================*/
+
+@media(max-width:992px) {
+    .institute-hero__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-points {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .institute-hero__right {
+        margin-top: 40px;
+    }
+}
+
+/*====================================
+INSTITUTE STATS
+====================================*/
+
+@media(max-width:992px) {
+    .gi-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:576px) {
+    .gi-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*====================================
+FEATURED COURSES
+====================================*/
+
+@media(max-width:992px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:576px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*====================================
+LEARNING PATH
+====================================*/
+
+@media(max-width:992px) {
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*====================================
+WHY CHOOSE US
+====================================*/
+@media(max-width:992px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:576px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*====================================
+CAREER ROADMAP
+====================================*/
+
+@media(max-width:992px) {
+
+    .roadmap::before,
+    .roadmap-line {
+        left: 40px;
+    }
+
+    .roadmap-step {
+        justify-content: flex-start !important;
+        padding-left: 90px;
+    }
+
+    .roadmap-card {
+        width: 100%;
+    }
+
+    .roadmap-icon {
+        left: 40px;
+    }
+}
+
+/*====================================
+REVIEWS
+====================================*/
+@media(max-width:768px) {
+    .review-card {
+        width: 300px;
+    }
+
+    .google-rating {
+        flex-direction: column;
+    }
+}
+
+/*====================================
+CTA
+====================================*/
+@media(max-width:768px) {
+    .cta-box {
+        padding: 50px 30px;
+    }
+
+    .cta-box h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media(max-width:992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-card {
+        border-right: none;
+        border-bottom: 1px solid #ececec;
+    }
+
+    .contact-short-info {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .contact-map iframe {
+        min-height: 350px;
+    }
+}
