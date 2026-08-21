@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Govardhan Institute — Logo Loader Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader" aria-label="Loading">
+  <div class="loader-scene">
+    <div class="logo-aura"></div>
+
+    <div class="logo-stage">
+      <svg class="orbit" viewBox="0 0 220 220" aria-hidden="true">
+        <circle class="orbit-track" cx="110" cy="110" r="94"></circle>
+        <circle class="orbit-progress" cx="110" cy="110" r="94"></circle>
+      </svg>
+
+      <div class="logo-reveal">
+        <img src="logo.png" alt="Govardhan Institute logo">
+      </div>
+    </div>
+
+    <div class="brand-name">GOVARDHAN INSTITUTE</div>
+    <div class="loading-label">Loading<span class="loading-dots"></span></div>
+  </div>
+</div>
+
+<main class="page">
+  <h1>Govardhan Institute</h1>
+  <p>Dummy homepage — the loader disappears when the page is ready.</p>
+  <button>Explore Courses</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -425,101 +425,36 @@ NAVBAR
     }
 }
 
-/*====================================
-SHARED NAVBAR RESPONSIVE
-====================================*/
-
-/* Desktop */
-
-@media (min-width:993px) {
-
-    .mobile-menu {
-
-        display: none !important;
-
-    }
-
-    .nav-menu {
-
-        display: flex !important;
-
-    }
-
-}
-
-
-/* Tablet */
-
+/*====================================================
+FINAL NAVBAR RESPONSIVE
+====================================================*/
 @media (max-width:992px) {
-
-    .navbar {
-
-        display: flex;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        height: 75px;
-
+    .gi-navbar {
+        height: 68px;
+        padding: 0 18px;
     }
 
-    .nav-menu {
-
-        display: none;
-
+    .gi-nav {
+        display: none !important;
     }
 
-    .navbar .btn {
-
-        display: none;
-
+    .gi-nav-btn {
+        display: none !important;
     }
 
-    .mobile-menu {
-
+    .gi-mobile-btn {
         display: flex !important;
-
         justify-content: center;
-
         align-items: center;
-
-        width: 46px;
-
-        height: 46px;
-
-        border: none;
-
-        border-radius: 12px;
-
-        cursor: pointer;
-
     }
 
     .gi-logo__subtitle {
-
         display: none;
-
-    }
-
-}
-
-
-/* Mobile */
-
-@media (max-width:768px) {
-
-    .navbar {
-        height: 70px;
-    }
-
-    .gi-logo {
-        gap: 10px;
     }
 
     .gi-logo__image {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
     }
 
     .gi-logo__title {
@@ -527,10 +462,38 @@ SHARED NAVBAR RESPONSIVE
     }
 }
 
-/* Small Mobile */
-@media (max-width:480px) {
-    .navbar {
-        height: 65px;
+@media (max-width:768px) {
+    .gi-header {
+        top: 10px;
+    }
+
+    .gi-navbar {
+        height: 64px;
+        padding: 0 14px;
+        border-radius: 14px;
+    }
+
+    .gi-logo {
+        gap: 10px;
+    }
+
+    .gi-logo__image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gi-logo__title {
+        font-size: .95rem;
+    }
+
+    .gi-mobile-menu {
+        width: 280px;
+    }
+}
+
+@media(max-width:480px) {
+    .gi-navbar {
+        padding: 0 12px;
     }
 
     .gi-logo__image {
@@ -539,7 +502,11 @@ SHARED NAVBAR RESPONSIVE
     }
 
     .gi-logo__title {
-        font-size: .9rem;
+        font-size: .85rem;
+    }
+
+    .gi-mobile-menu {
+        width: 250px;
     }
 }
 
@@ -549,7 +516,7 @@ MOBILE DRAWER
 @media(max-width:992px) {
     .gi-mobile-menu {
         width: 280px;
-        max-width: 85%;
+        right: -100%;
     }
 
     .gi-mobile-menu nav a {
@@ -565,6 +532,7 @@ MOBILE DRAWER
 @media(max-width:480px) {
     .gi-mobile-menu {
         width: 250px;
+        right: -100%;
     }
 }
 

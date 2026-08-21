@@ -1,0 +1,316 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+
+/* =========================
+   LOADING SCREEN
+========================= */
+
+#loader {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+/* When loading finishes */
+
+#loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================
+   LOADER CONTENT
+========================= */
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   LOGO AREA
+========================= */
+
+.logo-wrapper {
+    position: relative;
+
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.loader-logo {
+    width: 125px;
+    height: 125px;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation:
+        logoEntrance 1s ease-out,
+        logoPulse 2s ease-in-out 1s infinite;
+}
+
+
+/* =========================
+   LOADING RING
+========================= */
+
+.loading-ring {
+    position: absolute;
+
+    width: 165px;
+    height: 165px;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(128, 0, 255, 0.12);
+
+    border-top-color: #8b00ff;
+    border-right-color: #4b00ff;
+
+    animation: rotateRing 1.2s linear infinite;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.logo-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: rgba(130, 0, 255, 0.15);
+
+    filter: blur(25px);
+
+    animation: glowPulse 2s ease-in-out infinite;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   LOADING TEXT
+========================= */
+
+.loading-text {
+
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    color: #555;
+
+    letter-spacing: 1px;
+}
+
+
+/* Animated dots */
+
+.dots::after {
+
+    content: "";
+
+    animation: dotsAnimation 1.5s infinite;
+}
+
+
+/* =========================
+   WEBSITE
+========================= */
+
+#website {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+#website h1 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+#website p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#website button {
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(135deg,
+            #8b00ff,
+            #4b00ff);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+
+/* Logo comes in */
+
+@keyframes logoEntrance {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.65);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Subtle logo breathing */
+
+@keyframes logoPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+
+/* Ring */
+
+@keyframes rotateRing {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Glow */
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+}
+
+
+/* Loading dots */
+
+@keyframes dotsAnimation {
+
+    0% {
+        content: "";
+    }
+
+    33% {
+        content: ".";
+    }
+
+    66% {
+        content: "..";
+    }
+
+    100% {
+        content: "...";
+    }
+}
